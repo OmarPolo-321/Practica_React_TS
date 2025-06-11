@@ -1,15 +1,20 @@
 
 interface props{
-  titulo:string
-  dato:number
+  name:string
+  age ?:number
 }
 
 
-export const App = ({titulo,dato}:props) => {
+export const App = ({name,age}:props) => {
+  let mensaje=""
+  if(age == undefined){
+    mensaje= `Hola ${name}`
+  }else{
+    mensaje =`Hola ${name}, Tienes ${age} años `
+  }
   return (
     <>
-      <h2>{titulo}</h2>
-      <h1>{dato}</h1>
+      <h1>{mensaje}</h1>
     </>
   )
 }

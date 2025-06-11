@@ -20,7 +20,7 @@ interface ListaAppProps {
 export const ListaApp = ({ ListSeccions }: ListaAppProps) => {
     const [arreglo, setArreglo] = useState(ListSeccions)
     const [inputValue, setInputValue] = useState("")
-    
+
     const AddTask = () => {
         if (inputValue.trim() === "") return
         setArreglo([...arreglo, { nombre: inputValue, estado: false }])
@@ -29,16 +29,19 @@ export const ListaApp = ({ ListSeccions }: ListaAppProps) => {
     // console.log(ListSeccions)
 
     return (
-        <>
+        <div>
             <h1>Lista de Tareas</h1>
-            <InputTask value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-            <button onClick={AddTask}>Agregar Tarea</button>
-            <ol>
-                {arreglo.map((tarea, index) => (
-                    <Item className={index.toString()} key={index} nombre={tarea.nombre} estado={tarea.estado}></Item>
-                ))}
-            </ol>
-
-        </>
+            <div>
+                <InputTask value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+                <button onClick={AddTask}>Agregar Tarea</button>
+            </div>
+            <div>
+                <ol>
+                    {arreglo.map((tarea, index) => (
+                        <Item className={index.toString()} key={index} nombre={tarea.nombre} estado={tarea.estado}></Item>
+                    ))}
+                </ol>
+            </div>
+        </div>
     )
 }
