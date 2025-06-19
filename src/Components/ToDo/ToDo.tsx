@@ -1,6 +1,6 @@
-import { InputToDo } from "./InputToDo";
-import { ListToDo } from "./ListToDo";
-import { UseTodos } from "../Hooks/UseTodos.ts";
+import { InputToDo } from "./InputToDo.tsx";
+import { ListToDo } from "./ListToDo.tsx";
+import { UseTodos } from "../../Hooks/UseTodos.ts";
 
 export const ToDo = () => {
     const { todos, addTodo, toggleTodo, removeTodo } = UseTodos();

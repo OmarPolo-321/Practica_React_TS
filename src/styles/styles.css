@@ -7,6 +7,7 @@ body{
 h1{
     color: red;
 }
+
 .input{
     display: flex;
     width: 50%;

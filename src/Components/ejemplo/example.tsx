@@ -1,11 +1,10 @@
-
 interface props{
   name:string
   age ?:number
 }
 
 
-export const App = ({name,age}:props) => {
+export const Example = ({name,age}:props) => {
   let mensaje=""
   if(age == undefined){
     mensaje= `Hola ${name}`
@@ -18,4 +17,3 @@ export const App = ({name,age}:props) => {
     </>
   )
 }
-

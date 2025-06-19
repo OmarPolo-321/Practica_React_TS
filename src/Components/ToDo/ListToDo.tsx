@@ -1,4 +1,4 @@
-import type { Task } from '../model/Task';
+import type { Task } from '../../model/Task';
 import { TaskToDo } from './TaskToDo';
 
 interface Props {
