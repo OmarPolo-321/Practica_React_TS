@@ -8,6 +8,7 @@ interface Props {
 }
 
 export const ListToDo = ({ todos, onToggle, onDelete } : Props) => {
+  
   return (
     <ul>
       {todos.map(todo => (

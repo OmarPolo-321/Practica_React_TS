@@ -6,7 +6,7 @@ interface ItemProps {
     estado: boolean
     className?: string
 }
-
+console.log("me ejecute")
 const Item = ({ nombre, estado, className }: ItemProps) => {
     return (
         <li className={className}>

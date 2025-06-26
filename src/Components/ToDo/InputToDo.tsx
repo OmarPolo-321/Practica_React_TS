@@ -4,7 +4,7 @@ interface Props {
   onAdd: (text: string) => void;
 }
 
-export const InputToDo = ({ onAdd }: Props) => {
+export const InputToDo =({ onAdd }: Props) => {
   const [text, setText] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -14,7 +14,7 @@ export const InputToDo = ({ onAdd }: Props) => {
       setText('');
     }
   };
-
+  
   return (
     <form className="input" onSubmit={handleSubmit}>
       <input

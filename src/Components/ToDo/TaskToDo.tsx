@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import type { Task } from '../../model/Task';
 
 interface Props {
@@ -6,7 +7,8 @@ interface Props {
   onDelete: (id: string) => void;
 }
 
-export const TaskToDo = ({ todo, onToggle, onDelete }:Props) => {
+export const TaskToDo = memo(({ todo, onToggle, onDelete }:Props) => {
+  console.log("Renderiza:", todo.text); // útil para ver qué se actualiza
   return (
     <li style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}>
       <input type="checkbox" checked={todo.completed} onChange={() => onToggle(todo.id)} />
@@ -14,4 +16,4 @@ export const TaskToDo = ({ todo, onToggle, onDelete }:Props) => {
       <button onClick={() => onDelete(todo.id)}>Eliminar</button>
     </li>
   );
-};
+});

@@ -4,6 +4,7 @@ import { UseTodos } from "../../Hooks/UseTodos.ts";
 
 export const ToDo = () => {
     const { todos, addTodo, toggleTodo, removeTodo } = UseTodos();
+    console.log("Ejeuta del ToDo input y list")
     return (
         <>
             <h1>Este es la lista ToDo</h1>
